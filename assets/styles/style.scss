@@ -1,0 +1,481 @@
+$azul: #002A54;
+$morado: #846cc3;
+$background: rgb(244, 244, 244);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+section{
+    padding: 60px 0;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    .title{
+        color: $azul;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 40px;
+    }
+    .text{
+        color: $azul;
+        text-align: center;
+        padding-bottom: 40px;
+
+    }
+}
+
+/* header */
+.header{
+    margin: 0;
+    padding: 0;
+    nav{
+        padding: 10px 20px;
+        display: flex;
+        background-color: $morado;
+        .burger{
+            width: 5%;
+            color: white;
+        }
+        .links{
+            width: 95%;
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .sub-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        color: white;
+        background-color: $azul;
+        align-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 200;
+        h3{
+            font-weight: 200;
+        }
+        .regresar{
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .logo{
+            display: flex;
+            img{
+                width: 100px;
+                height: 100px;
+            }
+            .lema{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+        }
+        .texto{
+            text-transform: uppercase;
+            width: 35%;
+            text-align: center;
+        }
+        .buscar{
+            background-color: $morado;
+            padding: 10px 20px;
+            span{
+                margin-right: 10px;
+                color: $azul;
+            }
+            input{
+                background-color: $morado;
+                color: white;
+                border: 1px solid transparent;
+                padding: 5px;
+                height: 100%;
+            }
+        }
+    }
+}
+
+/* Login */
+.enter{
+    .login{
+        display: flex;
+        justify-content: space-evenly;
+        a{
+            display: block;
+            border: 1px solid $azul;
+            padding: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: $azul;
+            &:hover{
+                background-color: $azul;
+                border: 1px solid $azul;
+                color: white;                
+
+            }
+        }
+    }
+}
+
+/* Slider */
+.slider{
+    .slider_container{
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        align-items: center;
+
+    }
+    .slider_body{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        opacity: 0;
+        pointer-events: none;
+        display: grid;
+        grid-template-columns: 1fr max-content;
+        align-items: center;
+        transition: opacity 1.5s;
+        padding: 0 60px;
+        justify-content: center;
+        display: flex;
+    }
+    .slider_body--show{
+        opacity: 1;
+        pointer-events: unset;
+        
+    }
+    .slider_text{
+        width: 50%;
+    }
+    .slider_picture{
+        width: 250px;
+        .slider_img{
+            width: 100%;
+        }
+    }
+    .slider_arrow{
+        cursor: pointer;
+    }
+}
+
+
+/* Plus */
+.plus{
+    background-color: $background;
+    .services{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .card{
+            width: 30%;
+            background-color: white;
+            padding: 20px 5px;
+            border-radius: 10px;
+            .title{
+                font-weight: bold;
+                text-transform: none;
+                padding-bottom: 20px;
+            }
+            .icon{
+                font-size: 100px;
+                text-align: center;
+                padding-bottom: 20px;
+
+            }
+            .description{
+                text-align: center;
+            }
+        }
+    }
+}
+
+/* Categries */
+.categories{
+    .mini-categories{
+        display: flex;
+        justify-content: space-between;
+        .card{
+            width: 15%;
+            display: block;
+            .title{
+                font-size: 18px;
+                height: 10px;
+            }
+            .img{
+                width: 100%;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* About us */
+.about{
+    background-color: $background;
+    .text-bold{
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .mini-categories{
+        display: flex;
+        justify-content: space-between;
+        .card{
+            width: 10%;
+            display: block;
+            .title{
+                font-size: 14px;
+                height: 10px;
+            }
+            .img{
+                width: 100%;
+                img{
+                    width: 100%;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+
+.contact{
+    background-color: $background;
+    .form-container{
+        display: flex;
+        justify-content: space-between;
+        .text{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            justify-content: space-between;
+            width: 20%;
+            h2{
+                margin-bottom: 10px;
+            }
+        }
+        .form{
+            width: 75%;
+            form{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                .inputs{
+                    width: 40%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    .input{
+                        height: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                        margin: 0 10px ;
+                        .laber{
+                            width: 20%;
+                            text-align: start;
+                            align-items: center;
+                            padding-top: 5px;
+                            font-size: 18px;
+                        }
+                        .inputb{
+                            width: 75%;
+                            padding: 3px;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                .textarea{
+                    textarea{
+                        border-radius: 10px;
+                    }
+                }
+                .submit{
+                    display: flex;
+                    justify-content: end;
+                    flex-direction: column;
+                    align-items: center;
+                    button{
+                        background-color: $azul;
+                        color: white;
+                        border-radius: 10px;
+                        padding: 10px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+/* Footer */
+footer{
+    background-color: $azul;
+    padding: 40px 0;
+    color: white;
+    .contenido{
+        display: flex;
+        justify-content: space-between;
+        .logo-redes{
+            width: 26% ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .redes{
+                font-size: 26px;
+                font-weight: 300;
+            }
+        }
+        .links-politicas{
+            width: 32%;
+            .botones{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 5px;
+                button{
+                    width: 45%;
+                    padding: 10px;
+                    margin: 5px 0;
+                    background-color: white;
+                    border-radius: 10px;
+                    color: black;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: white;
+                font-size: 16px;
+                margin-bottom: 20px;
+                display: block;
+            }
+        }
+        .info{
+            display: flex;
+            flex-direction: column;
+            p{
+                margin: 15px 0;
+            }
+            
+        }
+
+
+    }
+}
+
+
+
+@media (max-width: 992px) {
+	.container{
+		width: 720px;
+        .title{
+            font-size: 24px;
+        }
+	}
+    
+}
+
+@media (max-width: 768px) {
+	.container{
+		width: 540px;
+	}
+}
+
+
+@media (max-width: 576px) {
+	.container{
+		width: 90%;
+	}
+}
+
+
+
+
+
+
+
+.title-register{
+    .registros{
+        display: flex;
+        justify-content: center;
+        .medio{
+            padding: 20px;
+            text-align: center;
+            display: block;
+            .logo{
+                font-size: 50px;
+                color: $morado;
+            }
+        }
+    }
+    .formulario-registro{
+        background-color: $background;
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        form{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .inputs{
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .row{
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 5px 10px ;
+                    label{
+                        width: 10%;
+                        text-align: start;
+                        align-items: center;
+                        padding-top: 5px;
+                        font-size: 18px;
+                    }
+                    input{
+                        width: 60%;
+                        padding: 3px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .mapa-enviar{
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                .enviar{
+                    display: flex;
+                    justify-content: center;
+                    button{
+                        padding: 7px 10px;
+                        margin-top: 10px;
+                        color: white;
+                        background-color: $azul;
+                        border-radius: 10px;
+                        border: 1px solid $azul;
+                    }
+                }
+            }
+        }
+
+    }
+}
