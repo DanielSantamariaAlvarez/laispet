@@ -290,7 +290,8 @@ section {
 }
 
 .categories .mini-categories .card .img img {
-  width: 100%;
+  width: 180px;
+  height: 180px;
   border-radius: 10px;
 }
 
